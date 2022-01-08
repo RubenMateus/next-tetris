@@ -5,10 +5,11 @@
     "build": "next build",
     "dev": "next",
     "lint": "next lint --dir src",
-    "lint:fix": "next lint --dir src --fix",
+    "lint:fix": "next lint --fix --file",
     "start": "next start",
-    "test": "jest --watchAll --coverage",
-    "test:ci": "jest --ci --coverage",
+    "test": "jest --coverage",
+    "test:watch": "jest --watchAll --coverage",
+    "test:ci": "jest --ci --coverage --passWithNoTests",
     "prepare": "husky install"
   },
   "dependencies": {

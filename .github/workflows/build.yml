@@ -1,10 +1,10 @@
-name: Node.js CI
+name: Build and Test
 
 on:
   push:
-    branches: [master]
+    branches: [main]
   pull_request:
-    branches: [master]
+    branches: [main]
 
 jobs:
   build:
@@ -29,7 +29,7 @@ jobs:
         run: yarn build
 
       - name: Test
-      - run: yarn test:ci
+        run: yarn test:ci
 
       - name: Codecov coverage
         uses: codecov/codecov-action@v2.1.0
